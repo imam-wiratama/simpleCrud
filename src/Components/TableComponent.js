@@ -6,27 +6,16 @@ class TableComponent extends Component {
         let datas = this.props.dataStateFromParent;
         datas.splice(i,1);
         this.setState({
-          datas: datas
+            datas: datas
         })
         this.props.parentCallback({
             datas: datas
         })
       }
     
-      functionEdit = (i) => {
+    functionEdit = (i) => {
         let data = this.props.dataStateFromParent[i];
-        // this.refs.name.value = data.name;
-        // this.refs.address.value = data.address;
-        // this.refs.phone.value = data.phone;
-    
-        // this.setState({
-        //   flag: 1,
-        //   index: i,
-        //   submitButton:'UPDATE',
-        //   disabledButton:true
-        // });
-        // this.refs.name.focus();
-        console.log(data);
+      
         this.props.editCallback({
             datas:this.props.dataStateFromParent,
             target:data,
@@ -35,27 +24,32 @@ class TableComponent extends Component {
             submitButton: 'UPDATE',
             disabledButton:true
         })
-    
-      }
+    }
 
     render() {
         let datas = this.props.dataStateFromParent;
         let disable = this.props.dataStateDisabled
-        console.log('disable:' + disable)
         return (
             <>
-                 {datas.map((data, i) =>
-                        <tr key={i}>
-                          <td>{i+1}</td>
-                          <td>{data.name}</td>
-                          <td>{data.address}</td>
-                          <td>{data.phone}</td>
-                          <td>
-                            <button onClick={()=>this.functionEdit(i)} className="myButtonEdit">EDIT</button>
-                            <button onClick={()=>this.functionDelete(i)} disabled={disable} className="myButtonDelete">DELETE</button>
-                          </td>
-                        </tr>
-                        )}
+                {datas.map((data, i) =>
+                    <tr key={i}>
+                        <td>{i+1}</td>
+                        <td>{data.name}</td>
+                        <td>{data.address}</td>
+                        <td>{data.phone}</td>
+                        <td>
+                            <button 
+                                onClick={()=>this.functionEdit(i)} 
+                                className="myButtonEdit">EDIT
+                            </button>
+                            <button 
+                                onClick={()=>this.functionDelete(i)} 
+                                disabled={disable} 
+                                className="myButtonDelete">DELETE
+                            </button>
+                        </td>
+                    </tr>
+                )}
             </>
         );
     }
