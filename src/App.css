@@ -40,6 +40,7 @@ table{
   margin-right: 3px;
   border:none;
   cursor:pointer;
+  font-size: 11px;
 }
 .headName{
   width: 74px;
@@ -56,6 +57,7 @@ table{
   display: inline-block;
   border:none;
   cursor:pointer;
+  font-size: 11px;
 }
 .myButtonDelete:hover{
   background-color: white;
@@ -73,6 +75,7 @@ table{
   padding: 1px;
   border:none;
   cursor:pointer;
+  font-size: 11px;
 }
 .myButtonAdd:hover{
   background-color: green;
