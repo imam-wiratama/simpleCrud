@@ -1,10 +1,13 @@
 @font-face {
-  font-family: Averia;
-  src: local('Averia'), url(./fonts/AveriaSerifLibre-Regular.ttf) format('truetype');
+  font-family: Cutive Mono;
+  src: local('Cutive Mono'), url(./fonts/CutiveMono-Regular.ttf) format('truetype');
 }
 .App {
   text-align: center;
-  font-family: 'Averia', serif; 
+}
+pre{
+  font-family: 'Cutive Mono', monospace;
+  font-size: 12px;
 }
 .App > * {
   flex: 1 100%;
@@ -97,4 +100,7 @@ input, .inputName, .inputAddress, .inputPhone{
 .myForm{
   padding: 0px;
   margin-top: 0px;
+}
+.centerText{
+  text-align: center !important;
 }

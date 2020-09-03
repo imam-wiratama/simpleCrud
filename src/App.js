@@ -60,7 +60,7 @@ class App extends Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
+                      <td colSpan="5" className="centerText">
                         <h1>No Data</h1>
                       </td>
                     </tr>
