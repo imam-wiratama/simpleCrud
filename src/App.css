@@ -72,10 +72,10 @@ table{
   background-color: #02a4bc;
   color: #fff;
   display: inline-block;
-  padding: 1px;
+  padding: px;
   border:none;
   cursor:pointer;
-  font-size: 11px;
+  font-size: 12px;
 }
 .myButtonAdd:hover{
   background-color: green;
