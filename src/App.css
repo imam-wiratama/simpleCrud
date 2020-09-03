@@ -1,38 +1,100 @@
+@font-face {
+  font-family: Averia;
+  src: local('Averia'), url(./fonts/AveriaSerifLibre-Regular.ttf) format('truetype');
+}
 .App {
   text-align: center;
+  font-family: 'Averia', serif; 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > * {
+  flex: 1 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.centerFixed{
+  transform: translate(-18px);
+}
+table{
+ width:100%;
+ padding-bottom: 15px;
+ border-bottom: 1px solid gray;
+}
+.tableList{
+  padding:5px;
+}
+.tableList td, .tableList th{
+  padding:2px 2px;
+  text-align:left;
+}
+.myButtonEdit{
+  background-color: #02a4bc;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 15px;
+  margin-right: 3px;
+  border:none;
+  cursor:pointer;
+}
+.headName{
+  width: 74px;
+}
+.headAddress{
+  width: 140px;
+}
+.headPhone{
+  width: 76px;
+}
+.myButtonDelete{
+  background-color: red;
+  color: #fff;
+  display: inline-block;
+  border:none;
+  cursor:pointer;
+}
+.myButtonDelete:hover{
+  background-color: white;
+  color: red;
+
+}
+.myButtonDelete:disabled{
+  background-color: black;
+  color: red;
+}
+.myButtonAdd{
+  background-color: #02a4bc;
+  color: #fff;
+  display: inline-block;
+  padding: 1px;
+  border:none;
+  cursor:pointer;
+}
+.myButtonAdd:hover{
+  background-color: green;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.myButtonEdit:hover{
+  background-color: rgb(168, 177, 3);
+  color: yellow;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input, .inputName, .inputAddress, .inputPhone{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  margin-right: 5px;
+}
+.inputName {
+  width: 70px;
+}
+.inputAddress {
+  width: 136px;
+}
+.inputPhone {
+  width: 75px;
+}
+.myForm{
+  padding: 0px;
+  margin-top: 0px;
 }
